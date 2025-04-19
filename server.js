@@ -366,44 +366,44 @@ const patientId = req.body.context.patientId;
         {
           "summary": "Example",
           "indicator": "info",
-          "extension": {
-            "com.epic.cdshooks.card.detail.content-type": "text/html"
-          },
+          // "extension": {
+          //   "com.epic.cdshooks.card.detail.content-type": "text/html"
+          // },
           "detail": "Another card to test suggestions",
-          "source": {
-            "label": "Clinical Inferences",
-            "url": "https://www.example.com/",
-            "icon": "file://example/CDSHooks/images/example.png",
-            "topic": {
-              "code": "BCSCard2",
-              "system": "card-system",
-              "display": "BCS Card 2"
-            }
-          },
-          "links": [
-            {
-              "label": "Github",
-              "url": "https://github.com",
-              "type": "absolute"
-            },
-            {
-              "label": "R4 SMART Example App",
-              "url": "https://example.com/EpicSMARTApp/Default.aspx?appFhirVersion=R4",
-              "type": "smart",
-              "appContext": "%FNAME%-%EXTENSION;74901%-420fe522-193c-11eb-9552-460231621f93~!@#$%^&*()-+{}[]|\\"
-            }
-          ],
-          "overrideReasons": [
-            {
-              "code": "patrefused",
-              "system": "http://example.org/cds-services/fhir/CodeSystem/override-reasons",
-              "display": "Patient refused"
-            },
-            {
-              "code": "seecomment",
-              "system": "http://example123.org/cds-services/fhir/CodeSystem/override-reasons"
-            }
-          ],
+          // "source": {
+          //   "label": "Clinical Inferences",
+          //   "url": "https://www.example.com/",
+          //   "icon": "file://example/CDSHooks/images/example.png",
+          //   "topic": {
+          //     "code": "BCSCard2",
+          //     "system": "card-system",
+          //     "display": "BCS Card 2"
+          //   }
+          // },
+          // "links": [
+          //   {
+          //     "label": "Github",
+          //     "url": "https://github.com",
+          //     "type": "absolute"
+          //   },
+          //   {
+          //     "label": "R4 SMART Example App",
+          //     "url": "https://example.com/EpicSMARTApp/Default.aspx?appFhirVersion=R4",
+          //     "type": "smart",
+          //     "appContext": "%FNAME%-%EXTENSION;74901%-420fe522-193c-11eb-9552-460231621f93~!@#$%^&*()-+{}[]|\\"
+          //   }
+          // ],
+          // "overrideReasons": [
+          //   {
+          //     "code": "patrefused",
+          //     "system": "http://example.org/cds-services/fhir/CodeSystem/override-reasons",
+          //     "display": "Patient refused"
+          //   },
+          //   {
+          //     "code": "seecomment",
+          //     "system": "http://example123.org/cds-services/fhir/CodeSystem/override-reasons"
+          //   }
+          // ],
           "suggestions": [
             {
               "label": "CBC",

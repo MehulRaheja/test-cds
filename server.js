@@ -363,16 +363,38 @@ const patientId = req.body.context.patientId;
   res.json(
     {
       "cards": [
-    {
-      "summary": "Testing Informational Card",
-      "detail": "* Suspected mehul cancer. \n\n* Please add to patient's diagnoses.\n\nSuspected Bladder cancer. Please add to patient's diagnoses.",
-	  "indicator": "critical",
-      "source": {
-        "topic": {
-          "code": "examplecode1"
-        }
-      },	  
-    },]
+        {
+          "label":"Diabetes",
+          "uuid": "85126ce5-b0a7-4a54-86f4-d7b52426cc58",
+                "actions":[  
+                   {  
+                      "type":"create",
+                      "description":"Diabetes Order Set from CDS Hooks",
+                      "resource": {
+              "resourceType": "ServiceRequest",
+              "status": "draft",
+              "intent": "proposal",
+              "category": [
+                {
+                "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                  "code": "outpatient",
+                  "display": "Outpatient"
+                }]
+              }],
+              "code": {
+                "coding": [
+                  {
+                  "system": "urn:com.epic.cdshooks.action.code.system.orderset-item",
+                  "code": "DIABETES"
+                }
+                ]
+              }
+              },
+                   },
+                ]
+             }]
 
       // "cards": [
       //   {

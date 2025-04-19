@@ -48,6 +48,66 @@ app.get('/cds-services' , (req, res) => {
   res.json(items);
 });
 
+app.get('/cds-services/transplant-order-create', (req, res) => {
+  res.json( {
+    "cards": [
+      {
+        "summary": "Suggest transplant referral",
+        "detail": "The patient appears eligible for a transplant evaluation. Consider placing a referral order.",
+        "indicator": "info",
+        "source": {
+          "label": "Transplant Eligibility Service",
+          "url": "https://your-service.com"
+        },
+        "suggestions": [
+          {
+            "label": "Add transplant referral order",
+            "uuid": "transplant-referral-001",
+            "actions": [
+              {
+                "type": "create",
+                "description": "Create a draft referral order for transplant evaluation.",
+                "resource": {
+                  "resourceType": "ServiceRequest",
+                  "status": "draft",
+                  "intent": "order",
+                  "category": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/service-category",
+                          "code": "REF",
+                          "display": "Referral"
+                        }
+                      ]
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://snomed.info/sct",
+                        "code": "430193006",
+                        "display": "Referral to transplant service"
+                      }
+                    ]
+                  },
+                  "subject": {
+                    "reference": "Patient/{{context.patientId}}"
+                  },
+                  "authoredOn": "{{context.timestamp}}",
+                  "requester": {
+                    "reference": "Practitioner/{{context.userId}}"
+                  },
+                  "priority": "routine"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  })
+})
 app.post('/cds-services/transplant-order-create', (req, res) => {
   console.log(req.body);
 const patientId = req.body.context.patientId;

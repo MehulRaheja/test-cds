@@ -44,6 +44,7 @@ let items ={
 
 // Routes
 app.get('/cds-services' , (req, res) => {
+  console.log('cds-services',res)
   res.json(items);
 });
 

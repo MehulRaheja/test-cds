@@ -364,37 +364,86 @@ const patientId = req.body.context.patientId;
     {
       "cards": [
         {
-          "label":"Diabetes",
-          "uuid": "85126ce5-b0a7-4a54-86f4-d7b52426cc58",
-                "actions":[  
-                   {  
-                      "type":"create",
-                      "description":"Diabetes Order Set from CDS Hooks",
-                      "resource": {
-              "resourceType": "ServiceRequest",
-              "status": "draft",
-              "intent": "proposal",
-              "category": [
+          "summary": "Example",
+          "indicator": "info",
+          "extension": {
+            "com.epic.cdshooks.card.detail.content-type": "text/html"
+          },
+          "detail": "Another card to test suggestions",
+          "source": {
+            "label": "Clinical Inferences",
+            "url": "https://www.example.com/",
+            "icon": "file://example/CDSHooks/images/example.png",
+            "topic": {
+              "code": "BCSCard2",
+              "system": "card-system",
+              "display": "BCS Card 2"
+            }
+          },
+          "links": [
+            {
+              "label": "Github",
+              "url": "https://github.com",
+              "type": "absolute"
+            },
+            {
+              "label": "R4 SMART Example App",
+              "url": "https://example.com/EpicSMARTApp/Default.aspx?appFhirVersion=R4",
+              "type": "smart",
+              "appContext": "%FNAME%-%EXTENSION;74901%-420fe522-193c-11eb-9552-460231621f93~!@#$%^&*()-+{}[]|\\"
+            }
+          ],
+          "overrideReasons": [
+            {
+              "code": "patrefused",
+              "system": "http://example.org/cds-services/fhir/CodeSystem/override-reasons",
+              "display": "Patient refused"
+            },
+            {
+              "code": "seecomment",
+              "system": "http://example123.org/cds-services/fhir/CodeSystem/override-reasons"
+            }
+          ],
+          "suggestions": [
+            {
+              "label": "CBC",
+              "uuid": "613b0192-4243-4384-8294-4316dfb726bb",
+              "actions": [
                 {
-                "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                  "code": "outpatient",
-                  "display": "Outpatient"
-                }]
-              }],
-              "code": {
-                "coding": [
-                  {
-                  "system": "urn:com.epic.cdshooks.action.code.system.orderset-item",
-                  "code": "DIABETES"
+                  "type": "create",
+                  "description": "CBC from CDS Hooks",
+                  "resource": {
+                    "resourceType": "ServiceRequest",
+                    "status": "draft",
+                    "intent": "order",
+                    "category": [
+                      {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                            "code": "outpatient",
+                            "display": "Outpatient"
+                          }
+                        ]
+                      }
+                    ],
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "urn:com.epic.cdshooks.action.code.system.preference-list-item",
+                          "code": "CBC_IP"
+                        }
+                      ],
+                      "text": "Test Proc Display name"
+                    }
+                  }
                 }
-                ]
-              }
-              },
-                   },
-                ]
-             }]
+              ]
+            }
+          ]
+        }
+      ]
+    
 
       // "cards": [
       //   {

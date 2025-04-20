@@ -435,6 +435,9 @@ const patientId = req.body.context.patientId;
                     //   ],
                     //   "text": "Test Proc Display name"
                     // }
+                    "subject": {
+                      "reference": "Patient/"+patientId
+                    }
                   }
                 }
               ]

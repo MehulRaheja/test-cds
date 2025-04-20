@@ -415,6 +415,15 @@ const patientId = req.body.context.patientId;
                     "resourceType": "ServiceRequest",
                     "status": "draft",
                     "intent": "proposal",
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "urn:com.epic.cdshooks.action.code.system.orderset-item",
+                          "code": "DIABETES"
+                        }
+                      ],
+                      "text": "Diabetes"
+                    },
                     // "category": [
                     //   {
                     //     "coding": [

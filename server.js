@@ -364,7 +364,7 @@ const patientId = req.body.context.patientId;
     {
       "cards": [
         {
-          "summary": "Example",
+          "summary": "Transplant  referral suggested",
           "indicator": "info",
           // "extension": {
           //   "com.epic.cdshooks.card.detail.content-type": "text/html"
@@ -406,38 +406,37 @@ const patientId = req.body.context.patientId;
           // ],
           "suggestions": [
             {
-              "label": "CBC",
-              "uuid": "8fa7957a-f6e6-4cd8-b280-0efde2ffe9eb",
+              "label": "This is an important suggestion",
               "actions": [
-                {
-                  "type": "create",
-                  "description": "CBC from CDS Hooks",
-                  "resource": {
-                    "resourceType": "ServiceRequest",
-                    "status": "draft",
-                    "intent": "order",
-                    // "category": [
-                    //   {
-                    //     "coding": [
-                    //       {
-                    //         "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                    //         "code": "outpatient",
-                    //         "display": "Outpatient"
-                    //       }
-                    //     ]
-                    //   }
-                    // ],
-                    // "code": {
-                    //   "coding": [
-                    //     {
-                    //       "system": "urn:com.epic.cdshooks.action.code.system.preference-list-item",
-                    //       "code": "CBC_IP"
-                    //     }
-                    //   ],
-                    //   "text": "Test Proc Display name"
-                    // }
-                  }
-                }
+                // {
+                //   "type": "create",
+                //   "description": "CBC from CDS Hooks",
+                //   "resource": {
+                //     "resourceType": "ServiceRequest",
+                //     "status": "draft",
+                //     "intent": "order",
+                //     // "category": [
+                //     //   {
+                //     //     "coding": [
+                //     //       {
+                //     //         "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                //     //         "code": "outpatient",
+                //     //         "display": "Outpatient"
+                //     //       }
+                //     //     ]
+                //     //   }
+                //     // ],
+                //     // "code": {
+                //     //   "coding": [
+                //     //     {
+                //     //       "system": "urn:com.epic.cdshooks.action.code.system.preference-list-item",
+                //     //       "code": "CBC_IP"
+                //     //     }
+                //     //   ],
+                //     //   "text": "Test Proc Display name"
+                //     // }
+                //   }
+                // }
               ]
             }
           ]

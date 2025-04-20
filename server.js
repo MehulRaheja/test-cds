@@ -414,21 +414,21 @@ app.post('/cds-services/transplant-order-create', (req, res) => {
                     // Optional: Only add the exception extension if a valid exception code exists
                   ],
                   "category": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                          "code": "inpatient",
-                          "display": "Inpatient"
-                        }
-                      ]
-                    }
+                    // {
+                    //   "coding": [
+                    //     {
+                    //       "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                    //       "code": "inpatient",
+                    //       "display": "Inpatient"
+                    //     }
+                    //   ]
+                    // }
                   ],
                   "code": {
                     "coding": [
                       {
-                        "system": "urn:com.epic.cdshooks.action.code.system.orderset-item",
-                        "code": "DIABETES"
+                        "system": "urn:com.epic.cdshooks.action.code.system.preference-list-item",
+                        "code": "TRANSPLANT"
                       }
                     ],
                     "text": "Diabetes"

@@ -376,401 +376,79 @@ app.post('/cds-services/transplant-order-create', (req, res) => {
                   "resourceType": "ServiceRequest",
                   "status": "draft",
                   "intent": "proposal",
-                    "subject": {
-              "reference": "Patient/eorRFcFtkMn3fTS05W1ZlvA3",
-              "display": "Argonaut, Jason"
-            },
-                 "extension": [
-                  {
-                    "url": "http://fhir.org/argonaut/Extension/pama-rating",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "system": "http://fhir.org/argonaut/CodeSystem/pama-rating",
-                          "code": "appropriate"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "url": "http://fhir.org/argonaut/Extension/pama-rating-consult-id",
-                    "valueUri": "urn:uuid:neworder"
-                  },
-                  {
-                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-detailed-score",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "system": "http://open.epic.com/FHIR/StructureDefinition/CodeSystem/pama-rating-detailed-score",
-                          "code": "11"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-comment",
-                    "valueString": "Comment from new order"
-                  },
-                  {
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "system": "http://open.epic.com/FHIR/StructureDefinition/CodeSystem/pama-rating-exception",
-                          "code": ""
-                        }
-                      ]
-                    },
-                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-exception"
-                  }
-                ],
-                "category": [
-                  {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                        "code": "inpatient",
-                        "display": "Inpatient"
-                      }
-                    ]
-                  }
-                ],
-                "code": {
-                  "coding": [
-                    {
-                      "system": "urn:com.epic.cdshooks.action.code.system.orderset-item",
-                      "code": "DIABETES"
-                    }
-                  ],
-                  "text": "Diabetes"
-                },
-                "reasonReference": [
-                  {
-                    "reference": "Condition/ejwkKH6vIAe5l8Tcdlz1HJbBhhHptXy0VPfxVihFyfMIYuZyi5MBLePwAI.QLCSVuQMgm-SZww1QNfUs.S5t5xQ3",
-                    "type": "Condition",
-                    "display": "Cough"
-                  },
-                  {
-                    "reference": "Condition/ejwkKH6vIAe5l8Tcdlz1HJbBhhHptXy0VPfxVihFyfMJTnDUPRmH6rFLa9S0PUX00KNXN-YhAmGzPS4Pq.3u-ig3",
-                    "type": "Condition",
-                    "display": "Stomach pain"
-                  }
-                ],
-                "contained": [
-                  {
-                    "resourceType": "Observation",
-                    "id": "Indication1",
-                    "status": "preliminary",
-                    "code": {
-                      "text": "Indications Of Use"
-                    },
-                    "valueString": "headache"
-                  },
-                  {
-                    "resourceType": "Observation",
-                    "id": "Indication2",
-                    "status": "preliminary",
-                    "code": {
-                      "text": "Indications Of Use"
-                    },
-                    "valueString": "sneeze"
-                  },
-                  {
-                    "resourceType": "Observation",
-                    "id": "IndicationsComment",
-                    "status": "preliminary",
-                    "code": {
-                      "text": "Indications Of Use Comment"
-                    },
-                    "valueString": "Comment"
-                  },
-                  {
-                    "resourceType": "QuestionnaireResponse",
-                    "id": "OrderSpecificQuestions",
-                    "status": "in-progress",
-                    "item": [
-                      {
-                        "linkId": "Sample Question 1",
-                        "answer": [
-                          {
-                            "extension": [
-                              {
-                                "valueString": "Sample Answer 1",
-                                "url": "http://open.epic.com/FHIR/StructureDefinition/extension/order-question-comment"
-                              }
-                            ],
-                            "valueString": "Yes"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-                },
                   "subject": {
-              "reference": "Patient/eorRFcFtkMn3fTS05W1ZlvA3",
-              "display": "Argonaut, Jason"
-            },
-                "extension": [
-                  {
-                    "url": "http://fhir.org/argonaut/Extension/pama-rating",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "system": "http://fhir.org/argonaut/CodeSystem/pama-rating",
-                          "code": "appropriate"
-                        }
-                      ]
-                    }
+                    "reference": "Patient/eorRFcFtkMn3fTS05W1ZlvA3",
+                    "display": "Argonaut, Jason"
                   },
-                  {
-                    "url": "http://fhir.org/argonaut/Extension/pama-rating-consult-id",
-                    "valueUri": "urn:uuid:neworder"
-                  },
-                  {
-                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-detailed-score",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "system": "http://open.epic.com/FHIR/StructureDefinition/CodeSystem/pama-rating-detailed-score",
-                          "code": "11"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-comment",
-                    "valueString": "Comment from new order"
-                  },
-                  {
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "system": "http://open.epic.com/FHIR/StructureDefinition/CodeSystem/pama-rating-exception",
-                          "code": ""
-                        }
-                      ]
-                    },
-                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-exception"
-                  }
-                ],
-                "category": [
-                  {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                        "code": "inpatient",
-                        "display": "Inpatient"
-                      }
-                    ]
-                  }
-                ],
-                "code": {
-                  "coding": [
+                  "extension": [
                     {
-                      "system": "urn:com.epic.cdshooks.action.code.system.orderset-item",
-                      "code": "DIABETES"
-                    }
-                  ],
-                  "text": "Diabetes"
-                },
-                "reasonReference": [
-                  {
-                    "reference": "Condition/ejwkKH6vIAe5l8Tcdlz1HJbBhhHptXy0VPfxVihFyfMIYuZyi5MBLePwAI.QLCSVuQMgm-SZww1QNfUs.S5t5xQ3",
-                    "type": "Condition",
-                    "display": "Cough"
-                  },
-                  {
-                    "reference": "Condition/ejwkKH6vIAe5l8Tcdlz1HJbBhhHptXy0VPfxVihFyfMJTnDUPRmH6rFLa9S0PUX00KNXN-YhAmGzPS4Pq.3u-ig3",
-                    "type": "Condition",
-                    "display": "Stomach pain"
-                  }
-                ],
-                "contained": [
-                  {
-                    "resourceType": "Observation",
-                    "id": "Indication1",
-                    "status": "preliminary",
-                    "code": {
-                      "text": "Indications Of Use"
-                    },
-                    "valueString": "headache"
-                  },
-                  {
-                    "resourceType": "Observation",
-                    "id": "Indication2",
-                    "status": "preliminary",
-                    "code": {
-                      "text": "Indications Of Use"
-                    },
-                    "valueString": "sneeze"
-                  },
-                  {
-                    "resourceType": "Observation",
-                    "id": "IndicationsComment",
-                    "status": "preliminary",
-                    "code": {
-                      "text": "Indications Of Use Comment"
-                    },
-                    "valueString": "Comment"
-                  },
-                  {
-                    "resourceType": "QuestionnaireResponse",
-                    "id": "OrderSpecificQuestions",
-                    "status": "in-progress",
-                    "item": [
-                      {
-                        "linkId": "Sample Question 1",
-                        "answer": [
+                      "url": "http://fhir.org/argonaut/Extension/pama-rating",
+                      "valueCodeableConcept": {
+                        "coding": [
                           {
-                            "extension": [
-                              {
-                                "valueString": "Sample Answer 1",
-                                "url": "http://open.epic.com/FHIR/StructureDefinition/extension/order-question-comment"
-                              }
-                            ],
-                            "valueString": "Yes"
+                            "system": "http://fhir.org/argonaut/CodeSystem/pama-rating",
+                            "code": "appropriate"
                           }
                         ]
                       }
-                    ]
-                  }
-                ]
+                    },
+                    {
+                      "url": "http://fhir.org/argonaut/Extension/pama-rating-consult-id",
+                      "valueUri": "urn:uuid:neworder"
+                    },
+                    {
+                      "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-detailed-score",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://open.epic.com/FHIR/StructureDefinition/CodeSystem/pama-rating-detailed-score",
+                            "code": "11"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-comment",
+                      "valueString": "Comment from new order"
+                    }
+                    // Optional: Only add the exception extension if a valid exception code exists
+                  ],
+                  "category": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                          "code": "inpatient",
+                          "display": "Inpatient"
+                        }
+                      ]
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "urn:com.epic.cdshooks.action.code.system.orderset-item",
+                        "code": "DIABETES"
+                      }
+                    ],
+                    "text": "Diabetes"
+                  },
+                  "reasonReference": [
+                    {
+                      "reference": "Condition/ejwkKH6vIAe5l8Tcdlz1HJbBhhHptXy0VPfxVihFyfMIYuZyi5MBLePwAI.QLCSVuQMgm-SZww1QNfUs.S5t5xQ3",
+                      "type": "Condition",
+                      "display": "Cough"
+                    }
+                  ]
+                }
               }
-            ],
-                 "extension": [
-                  {
-                    "url": "http://fhir.org/argonaut/Extension/pama-rating",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "system": "http://fhir.org/argonaut/CodeSystem/pama-rating",
-                          "code": "appropriate"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "url": "http://fhir.org/argonaut/Extension/pama-rating-consult-id",
-                    "valueUri": "urn:uuid:neworder"
-                  },
-                  {
-                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-detailed-score",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "system": "http://open.epic.com/FHIR/StructureDefinition/CodeSystem/pama-rating-detailed-score",
-                          "code": "11"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-comment",
-                    "valueString": "Comment from new order"
-                  },
-                  {
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "system": "http://open.epic.com/FHIR/StructureDefinition/CodeSystem/pama-rating-exception",
-                          "code": ""
-                        }
-                      ]
-                    },
-                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-exception"
-                  }
-                ],
-                "category": [
-                  {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                        "code": "inpatient",
-                        "display": "Inpatient"
-                      }
-                    ]
-                  }
-                ],
-                "code": {
-                  "coding": [
-                    {
-                      "system": "urn:com.epic.cdshooks.action.code.system.orderset-item",
-                      "code": "DIABETES"
-                    }
-                  ],
-                  "text": "Diabetes"
-                },
-                "reasonReference": [
-                  {
-                    "reference": "Condition/ejwkKH6vIAe5l8Tcdlz1HJbBhhHptXy0VPfxVihFyfMIYuZyi5MBLePwAI.QLCSVuQMgm-SZww1QNfUs.S5t5xQ3",
-                    "type": "Condition",
-                    "display": "Cough"
-                  },
-                  {
-                    "reference": "Condition/ejwkKH6vIAe5l8Tcdlz1HJbBhhHptXy0VPfxVihFyfMJTnDUPRmH6rFLa9S0PUX00KNXN-YhAmGzPS4Pq.3u-ig3",
-                    "type": "Condition",
-                    "display": "Stomach pain"
-                  }
-                ],
-                "contained": [
-                  {
-                    "resourceType": "Observation",
-                    "id": "Indication1",
-                    "status": "preliminary",
-                    "code": {
-                      "text": "Indications Of Use"
-                    },
-                    "valueString": "headache"
-                  },
-                  {
-                    "resourceType": "Observation",
-                    "id": "Indication2",
-                    "status": "preliminary",
-                    "code": {
-                      "text": "Indications Of Use"
-                    },
-                    "valueString": "sneeze"
-                  },
-                  {
-                    "resourceType": "Observation",
-                    "id": "IndicationsComment",
-                    "status": "preliminary",
-                    "code": {
-                      "text": "Indications Of Use Comment"
-                    },
-                    "valueString": "Comment"
-                  },
-                  {
-                    "resourceType": "QuestionnaireResponse",
-                    "id": "OrderSpecificQuestions",
-                    "status": "in-progress",
-                    "item": [
-                      {
-                        "linkId": "Sample Question 1",
-                        "answer": [
-                          {
-                            "extension": [
-                              {
-                                "valueString": "Sample Answer 1",
-                                "url": "http://open.epic.com/FHIR/StructureDefinition/extension/order-question-comment"
-                              }
-                            ],
-                            "valueString": "Yes"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-            "subject": {
-              "reference": "Patient/eorRFcFtkMn3fTS05W1ZlvA3",
-              "display": "Argonaut, Jason"
-            }
+            ]
           }
         ]
       }
     ]
-  })
+  }
+  )
 // res.json(
 //   {
 //     "cards": [

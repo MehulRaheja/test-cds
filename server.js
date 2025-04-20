@@ -408,35 +408,35 @@ const patientId = req.body.context.patientId;
             {
               "label": "This is an important suggestion",
               "actions": [
-                // {
-                //   "type": "create",
-                //   "description": "CBC from CDS Hooks",
-                //   "resource": {
-                //     "resourceType": "ServiceRequest",
-                //     "status": "draft",
-                //     "intent": "order",
-                //     // "category": [
-                //     //   {
-                //     //     "coding": [
-                //     //       {
-                //     //         "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                //     //         "code": "outpatient",
-                //     //         "display": "Outpatient"
-                //     //       }
-                //     //     ]
-                //     //   }
-                //     // ],
-                //     // "code": {
-                //     //   "coding": [
-                //     //     {
-                //     //       "system": "urn:com.epic.cdshooks.action.code.system.preference-list-item",
-                //     //       "code": "CBC_IP"
-                //     //     }
-                //     //   ],
-                //     //   "text": "Test Proc Display name"
-                //     // }
-                //   }
-                // }
+                {
+                  "type": "create",
+                  "description": "CBC from CDS Hooks",
+                  "resource": {
+                    "resourceType": "ServiceRequest",
+                    "status": "draft",
+                    "intent": "proposal",
+                    // "category": [
+                    //   {
+                    //     "coding": [
+                    //       {
+                    //         "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                    //         "code": "outpatient",
+                    //         "display": "Outpatient"
+                    //       }
+                    //     ]
+                    //   }
+                    // ],
+                    // "code": {
+                    //   "coding": [
+                    //     {
+                    //       "system": "urn:com.epic.cdshooks.action.code.system.preference-list-item",
+                    //       "code": "CBC_IP"
+                    //     }
+                    //   ],
+                    //   "text": "Test Proc Display name"
+                    // }
+                  }
+                }
               ]
             }
           ]

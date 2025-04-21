@@ -363,86 +363,86 @@ app.post('/cds-services/transplant-order-create', (req, res) => {
   res.json({
     "cards": [
       {
-        "summary": "CDS Hooks example card summary",
+        "summary": "CDS Hooks example card without action",
         "selectionBehavior": "at-most-one",
         "suggestions": [
           {
-            "label": "Add these actions",
-            "actions": [
-              {
-                "type": "create",
-                "description": "Diabetes Order Set",
-                "resource": {
-                  "resourceType": "ServiceRequest",
-                  "status": "draft",
-                  "intent": "proposal",
-                  "subject": {
-                    "reference": "Patient/eorRFcFtkMn3fTS05W1ZlvA3",
-                    "display": "Argonaut, Jason"
-                  },
-                  "extension": [
-                    {
-                      "url": "http://fhir.org/argonaut/Extension/pama-rating",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://fhir.org/argonaut/CodeSystem/pama-rating",
-                            "code": "appropriate"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "http://fhir.org/argonaut/Extension/pama-rating-consult-id",
-                      "valueUri": "urn:uuid:neworder"
-                    },
-                    {
-                      "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-detailed-score",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://open.epic.com/FHIR/StructureDefinition/CodeSystem/pama-rating-detailed-score",
-                            "code": "11"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-comment",
-                      "valueString": "Comment from new order"
-                    }
-                    // Optional: Only add the exception extension if a valid exception code exists
-                  ],
-                  "category": [
-                    // {
-                    //   "coding": [
-                    //     {
-                    //       "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                    //       "code": "inpatient",
-                    //       "display": "Inpatient"
-                    //     }
-                    //   ]
-                    // }
-                  ],
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "urn:com.epic.cdshooks.action.code.system.preference-list-item",
-                        "code": "TRANSPLANT"
-                      }
-                    ],
-                    "text": "Diabetes"
-                  },
-                  "reasonReference": [
-                    {
-                      "reference": "Condition/ejwkKH6vIAe5l8Tcdlz1HJbBhhHptXy0VPfxVihFyfMIYuZyi5MBLePwAI.QLCSVuQMgm-SZww1QNfUs.S5t5xQ3",
-                      "type": "Condition",
-                      "display": "Cough"
-                    }
-                  ]
-                }
-              }
-            ]
+            "label": "Add these actions without action",
+            // "actions": [
+            //   {
+            //     "type": "create",
+            //     "description": "Diabetes Order Set",
+            //     "resource": {
+            //       "resourceType": "ServiceRequest",
+            //       "status": "draft",
+            //       "intent": "proposal",
+            //       "subject": {
+            //         "reference": "Patient/eorRFcFtkMn3fTS05W1ZlvA3",
+            //         "display": "Argonaut, Jason"
+            //       },
+            //       "extension": [
+            //         {
+            //           "url": "http://fhir.org/argonaut/Extension/pama-rating",
+            //           "valueCodeableConcept": {
+            //             "coding": [
+            //               {
+            //                 "system": "http://fhir.org/argonaut/CodeSystem/pama-rating",
+            //                 "code": "appropriate"
+            //               }
+            //             ]
+            //           }
+            //         },
+            //         {
+            //           "url": "http://fhir.org/argonaut/Extension/pama-rating-consult-id",
+            //           "valueUri": "urn:uuid:neworder"
+            //         },
+            //         {
+            //           "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-detailed-score",
+            //           "valueCodeableConcept": {
+            //             "coding": [
+            //               {
+            //                 "system": "http://open.epic.com/FHIR/StructureDefinition/CodeSystem/pama-rating-detailed-score",
+            //                 "code": "11"
+            //               }
+            //             ]
+            //           }
+            //         },
+            //         {
+            //           "url": "http://open.epic.com/FHIR/StructureDefinition/extension/pama-rating-comment",
+            //           "valueString": "Comment from new order"
+            //         }
+            //         // Optional: Only add the exception extension if a valid exception code exists
+            //       ],
+            //       "category": [
+            //         // {
+            //         //   "coding": [
+            //         //     {
+            //         //       "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+            //         //       "code": "inpatient",
+            //         //       "display": "Inpatient"
+            //         //     }
+            //         //   ]
+            //         // }
+            //       ],
+            //       "code": {
+            //         "coding": [
+            //           {
+            //             "system": "urn:com.epic.cdshooks.action.code.system.preference-list-item",
+            //             "code": "TRANSPLANT"
+            //           }
+            //         ],
+            //         "text": "Diabetes"
+            //       },
+            //       "reasonReference": [
+            //         {
+            //           "reference": "Condition/ejwkKH6vIAe5l8Tcdlz1HJbBhhHptXy0VPfxVihFyfMIYuZyi5MBLePwAI.QLCSVuQMgm-SZww1QNfUs.S5t5xQ3",
+            //           "type": "Condition",
+            //           "display": "Cough"
+            //         }
+            //       ]
+            //     }
+            //   }
+            // ]
           }
         ]
       }
